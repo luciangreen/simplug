@@ -1,0 +1,10 @@
+{
+  "name": "simplug",
+  "version": "0.1.0",
+  "description": "simplug: LucianOS characters comment on your writing, code and music when you ask",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "license": "BSD-3-Clause"
+}

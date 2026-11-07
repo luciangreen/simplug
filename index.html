@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>simplug</title>
+  <link rel="stylesheet" href="/shared/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="bar">
+    <h1>simplug</h1>
+    <span class="quiet">Ask the character what it thinks of your work</span>
+  </header>
+  <main class="sp">
+    <section class="panel" aria-label="Files">
+      <h2>Choose a file</h2>
+      <div id="crumbs" class="crumbs"></div>
+      <ul id="files" class="files"></ul>
+    </section>
+    <section class="panel" aria-label="Comments">
+      <div class="row">
+        <h2 id="chosen">No file chosen</h2>
+        <span class="spacer"></span>
+        <button id="play" class="hidden">▶ Play</button>
+        <button id="ask" class="primary" disabled>What do you think?</button>
+      </div>
+      <ol id="comments" class="comments"></ol>
+      <div id="glOffer" class="row hidden">
+        <button id="runGL" class="primary"></button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
