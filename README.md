@@ -26,7 +26,7 @@ git clone https://github.com/luciangreen/simplug
   - How the sentences read, any questions you asked, and TODOs left.
   - A next step: connect it to a project, start a new one, or be reminded later.
 - **Prolog:**
-  - How many predicates and clauses it has, and which predicate does the most work.
+  - How many predicates and clauses it has, and which predicate has the most clauses.
   - Whether it is commented, and whether it has tests.
 - **Music** (Music-Composer `.mid` files):
   - Words that summarise the sound, from the dictionary in `lib/words.js`. The words come from tempo, key (major or minor), how the tune moves (steps, leaps, repeats), how busy it is, chords and loudness.

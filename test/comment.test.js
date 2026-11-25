@@ -53,7 +53,7 @@ test('thesis folders get a Grammar Logic offer', () => {
 test('comments on Prolog', () => {
   const c = commentOnFile({ path: 'x/a.pl', text: 'a(1).\na(2).\na(3).\nb :- a(_).\n' });
   assert.match(c.speech, /2 predicates in 4 clauses/);
-  assert.match(c.speech, /a\/1 does the most work/);
+  assert.match(c.speech, /a\/1 has the most clauses/);
   assert.match(c.speech, /no tests yet/);
 });
 
@@ -73,4 +73,11 @@ test('comments on music use the dictionary and what stands out', () => {
     assert.doesNotMatch(t.speech, /undefined/, `song${i}`);
   }
   for (let i = 0; i < 300; i++) assert.doesNotMatch(commentOnFile({ path: `d/${i}.txt`, text: 'Word word again. Again word.' }).speech, /undefined/);
+});
+
+test('Prolog counts: two clauses on a line, quoted text and nested arguments', () => {
+  const s = prologStats("q(1). q(2).\nt :- format('100% a :- b~n').\nw([1,2,3]).\nv(f(a,b), g(h(c,d))) :- true.");
+  assert.equal(s.clauses, 5);
+  assert.equal(s.predicates, 4);
+  assert.deepEqual(s.biggest, ['q/1', 2]);
 });
